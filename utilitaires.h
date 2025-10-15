@@ -4,5 +4,6 @@
 
 #ifndef SMP_TP2_GUILLAUMEP_UTILITAIRES_H
 #define SMP_TP2_GUILLAUMEP_UTILITAIRES_H
-t_EntierLong convertIntLong(int);
+t_EntierLong convertIntLong(string);
+void testEgalite(t_EntierLong, t_EntierLong);
 #endif //SMP_TP2_GUILLAUMEP_UTILITAIRES_H
