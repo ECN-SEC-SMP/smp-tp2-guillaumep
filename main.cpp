@@ -7,11 +7,11 @@
 using namespace std;
 #include "entierlong.h"
 #include "utilitaires.h"
+#include "lit_ecrit.h"
 
 int main(){
-    t_EntierLong convertion = convertIntLong(123456789);
-    for (int i = 0; i < sizeof(convertion.chiffres) / sizeof(convertion.chiffres[0]); i++) {
-        cout << convertion.chiffres[i] << endl;
-    }
+    t_EntierLong convertion = convertIntLong(-123456789);
+    afficheEntierLong(convertion);
+
     return 0;
 }

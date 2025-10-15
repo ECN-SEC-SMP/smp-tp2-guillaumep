@@ -27,11 +27,11 @@ t_EntierLong convertIntLong(int entierStandard){
         if (i <= stringEntier.length()) {
             // Conversion et ajout
             char c = stringEntier[stringEntier.length()-i];
-            entierLong.chiffres[i-1] = atoi(&c);
+            entierLong.chiffres[i] = atoi(&c);
         }
         else {
             // Remplis la liste de 0 pour les digits manquants
-            entierLong.chiffres[i-1] = 0;
+            entierLong.chiffres[i] = 0;
         }
     }
     // Retourne l'entier long
