@@ -18,10 +18,10 @@ int main(){
     testEgalite(convertion, convertionDeux);
     testEgaliteAbsolue(convertion, convertionDeux);
 
-    t_EntierLong resultatAddition = additionMemeSigne(convertion, convertionDeux);
+    t_EntierLong resultatAddition = addition(convertion, convertionDeux);
     afficheEntierLong(resultatAddition);
 
-    t_EntierLong resultatSoustraction = soustractionMemeSigne(convertion, convertionDeux);
+    t_EntierLong resultatSoustraction = soustraction(convertion, convertionDeux);
     afficheEntierLong(resultatSoustraction);
     return 0;
 }

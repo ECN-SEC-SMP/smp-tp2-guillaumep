@@ -89,7 +89,7 @@ void testEgalite(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
     }
 }
 
-void testEgaliteAbsolue(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
+int testEgaliteAbsolue(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
     // Booléen indiquant quel entier est le plus grand
     bool unPlusGrand = false;
     bool deuxPlusGrand = false;
@@ -108,13 +108,16 @@ void testEgaliteAbsolue(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) 
     // Affichage résultat quand entier long un plus grand
     if ((unPlusGrand == true and deuxPlusGrand == false)) {
         cout << "Le premier long entier est plus grand que le second" << endl;
+        return 1;
     }
     // Affichage résultat quand entier long deux plus grand
     if ((deuxPlusGrand == true and unPlusGrand == false)) {
         cout << "Le second long entier est plus grand que le premier" << endl;
+        return 2;
     }
     // Affichage résultat quand les deux entiers long sont égaux
     if (unPlusGrand == false && deuxPlusGrand == false) {
         cout << "Les deux entiers sont égaux" << endl;
     }
+    return 0;
 }
