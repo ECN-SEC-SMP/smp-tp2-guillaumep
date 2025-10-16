@@ -10,9 +10,10 @@ using namespace std;
 #include "lit_ecrit.h"
 
 int main(){
-    t_EntierLong convertion = convertIntLong("-12345678901234567899");
+    t_EntierLong convertion = convertIntLong("-92345678901234567899");
     t_EntierLong convertionDeux = convertIntLong("12345678901234567891");
     afficheEntierLong(convertion);
     testEgalite(convertion, convertionDeux);
+    testEgaliteAbsolue(convertion, convertionDeux);
     return 0;
 }

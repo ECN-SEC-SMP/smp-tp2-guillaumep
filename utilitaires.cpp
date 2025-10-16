@@ -45,13 +45,16 @@ void testEgalite(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
 
     // Boucle pour parcourir les entiers long
     for(int i = 0; i < MAXCHIFFRES+1; i++) {
+        // Si l'un des nombres de l'entier long un est plus grand que le deuxième en premier alors l'entier long un est plus grand que l'entier deux
         if (entierLongUn.chiffres[MAXCHIFFRES-i-1] > entierLongDeux.chiffres[MAXCHIFFRES-i-1] && deuxPlusGrand == false && unPlusGrand == false) {
             unPlusGrand = true;
         }
+        // Pareil mais pour l'entier deux
         if (entierLongDeux.chiffres[MAXCHIFFRES-i-1] > entierLongUn.chiffres[MAXCHIFFRES-i-1] && unPlusGrand == false && deuxPlusGrand == false) {
             deuxPlusGrand = true;
         }
     }
+    // Bonus : on vérifie les signes des entiers long et on inverse si l'un des deux entiers long est négatif
     if (entierLongUn.negatif == true and entierLongDeux.negatif == false) {
         deuxPlusGrand = true;
         unPlusGrand = false;
@@ -60,6 +63,7 @@ void testEgalite(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
         unPlusGrand = true;
         deuxPlusGrand = false;
     }
+    // Si les deux entiers long sont négatifs, alors l'entier long le plus proche de 0 est plus grand
     if (entierLongDeux.negatif == true and entierLongUn.negatif == true) {
         if (deuxPlusGrand == true) {
             unPlusGrand = true;
@@ -70,12 +74,46 @@ void testEgalite(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
             deuxPlusGrand = true;
         }
     }
+
+    // Affichage résultat quand entier long un plus grand
     if ((unPlusGrand == true and deuxPlusGrand == false)) {
         cout << "Le premier long entier est plus grand que le second" << endl;
     }
+    // Affichage résultat quand entier long deux plus grand
     if ((deuxPlusGrand == true and unPlusGrand == false)) {
         cout << "Le second long entier est plus grand que le premier" << endl;
     }
+    // Affichage résultat quand les deux entiers long sont égaux
+    if (unPlusGrand == false && deuxPlusGrand == false) {
+        cout << "Les deux entiers sont égaux" << endl;
+    }
+}
+
+void testEgalite(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
+    // Booléen indiquant quel entier est le plus grand
+    bool unPlusGrand = false;
+    bool deuxPlusGrand = false;
+
+    // Boucle pour parcourir les entiers long
+    for(int i = 0; i < MAXCHIFFRES+1; i++) {
+        // Si l'un des nombres de l'entier long un est plus grand que le deuxième en premier alors l'entier long un est plus grand que l'entier deux
+        if (entierLongUn.chiffres[MAXCHIFFRES-i-1] > entierLongDeux.chiffres[MAXCHIFFRES-i-1] && deuxPlusGrand == false && unPlusGrand == false) {
+            unPlusGrand = true;
+        }
+        // Pareil mais pour l'entier deux
+        if (entierLongDeux.chiffres[MAXCHIFFRES-i-1] > entierLongUn.chiffres[MAXCHIFFRES-i-1] && unPlusGrand == false && deuxPlusGrand == false) {
+            deuxPlusGrand = true;
+        }
+    }
+    // Affichage résultat quand entier long un plus grand
+    if ((unPlusGrand == true and deuxPlusGrand == false)) {
+        cout << "Le premier long entier est plus grand que le second" << endl;
+    }
+    // Affichage résultat quand entier long deux plus grand
+    if ((deuxPlusGrand == true and unPlusGrand == false)) {
+        cout << "Le second long entier est plus grand que le premier" << endl;
+    }
+    // Affichage résultat quand les deux entiers long sont égaux
     if (unPlusGrand == false && deuxPlusGrand == false) {
         cout << "Les deux entiers sont égaux" << endl;
     }
