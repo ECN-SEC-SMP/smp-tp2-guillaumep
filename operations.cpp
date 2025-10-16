@@ -117,3 +117,54 @@ t_EntierLong additionQuelconque(t_EntierLong entierLongUn, t_EntierLong entierLo
         return resultat;
     }
 }
+
+t_EntierLong soustractionQuelconque(t_EntierLong entierLongUn, t_EntierLong entierLongDeux){
+    // Resultat qui sera renvoyée par la fonction
+    t_EntierLong resultat;
+
+    // Si les deux entiers sont positifs
+    if(entierLongUn.negatif == 0 && entierLongDeux.negatif == 0){
+        if(testEgaliteAbsolue(entierLongUn, entierLongDeux) == 1){
+            return soustraction(entierLongUn, entierLongDeux);
+        }
+        else if(testEgaliteAbsolue(entierLongUn, entierLongDeux) == 2){
+            resultat = soustraction(entierLongDeux, entierLongUn);
+            resulat.negatif = 1;
+            return resultat;
+        }
+       else{
+            return soustraction(entierLongUn, entierLongDeux);
+        }
+    }
+
+    // Si premier entier positif et second négatif
+    if(entierLongUn.negatif == 0 && entierLongDeux.negatif == 1){
+        return addition(entierLongUn, entierLongDeux);
+    }
+
+    // Si premier entier négatif et second positif
+    if(entierLongUn.negatif == 1 && entierLongDeux.negatif == 0){
+        resultat = addition(entierLongUn, entierLongDeux);
+        resulat.negatif = 1;
+        return resultat;
+    }
+
+    // Si premier entier négatif et second négatif
+    if(entierLongUn.negatif == 1 && entierLongDeux.negatif == 1){
+        // Si entier un negatif plus grand que positif on soustrait l'entier un par l'entier deux
+        if(testEgaliteAbsolue(entierLongUn, entierLongDeux) == 1){
+            resultat = soustraction(entierLongUn, entierLongDeux);
+            resulat.negatif = 1;
+            return resultat;
+        }
+        // Si entier deux positif plus grand que négatif on soustrait l'entier deux par l'entier un
+        else if(testEgaliteAbsolue(entierLongUn, entierLongDeux) == 2){
+            return soustraction(entierLongDeux, entierLongUn);
+        }
+        else{
+            // Si les deux sont égaux on les soustraits entre eux pour avoir 0
+            return soustraction(entierLongUn, entierLongDeux);
+        }
+    }
+
+}
