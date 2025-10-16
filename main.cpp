@@ -8,12 +8,20 @@ using namespace std;
 #include "entierlong.h"
 #include "utilitaires.h"
 #include "lit_ecrit.h"
+#include "operations.h"
 
 int main(){
-    t_EntierLong convertion = convertIntLong("-92345678901234567899");
-    t_EntierLong convertionDeux = convertIntLong("12345678901234567891");
+    t_EntierLong convertion = convertIntLong("6458923");
+    t_EntierLong convertionDeux = convertIntLong("5000000");
     afficheEntierLong(convertion);
+
     testEgalite(convertion, convertionDeux);
     testEgaliteAbsolue(convertion, convertionDeux);
+
+    t_EntierLong resultatAddition = additionMemeSigne(convertion, convertionDeux);
+    afficheEntierLong(resultatAddition);
+
+    t_EntierLong resultatSoustraction = soustractionMemeSigne(convertion, convertionDeux);
+    afficheEntierLong(resultatSoustraction);
     return 0;
 }

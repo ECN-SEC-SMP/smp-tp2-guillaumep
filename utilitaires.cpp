@@ -89,7 +89,7 @@ void testEgalite(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
     }
 }
 
-void testEgalite(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
+void testEgaliteAbsolue(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
     // Booléen indiquant quel entier est le plus grand
     bool unPlusGrand = false;
     bool deuxPlusGrand = false;
