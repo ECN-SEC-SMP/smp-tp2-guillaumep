@@ -23,8 +23,8 @@ t_EntierLong addition(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
         retenu = 0;
         // Si le résultat est supérieur ou égal à 10
         if (resultatDecimal >= 10){
-            // On fait le modulo pour avoir le reste qui est assigné à la retenu
-            retenu = resultatDecimal % 10;
+            // On met la retenu a 1
+            retenu = 1;
             // On soustrait 10 au résultat
             resultatDecimal = resultatDecimal - 10;
         }
@@ -101,7 +101,7 @@ t_EntierLong additionQuelconque(t_EntierLong entierLongUn, t_EntierLong entierLo
         }
         // Si entier positif plus grand que négatif
         else if(testEgaliteAbsolue(entierLongUn, entierLongDeux) == 2){
-            return soustraction(entierLongUn, entierLongDeux);
+            return soustraction(entierLongDeux, entierLongUn);
         }
         // Si les deux sont égaux on les soustraits entre eux pour avoir 0
         else{

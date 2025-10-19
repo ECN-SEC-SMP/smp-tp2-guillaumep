@@ -69,8 +69,8 @@ void testEgalite(t_EntierLong entierLongUn, t_EntierLong entierLongDeux) {
         unPlusGrand = true;
         deuxPlusGrand = false;
     }
-    // Si les deux entiers long sont négatifs, alors l'entier long le plus proche de 0 est plus grand
-    if (entierLongDeux.negatif == true and entierLongUn.negatif == true) {
+    // Si les deux entiers long sont négatifs et que l'un des deux est plus grand que l'autre, alors l'entier long le plus proche de 0 est plus grand
+    if ((entierLongDeux.negatif == true and entierLongUn.negatif == true) and (unPlusGrand == true or deuxPlusGrand == true)) {
         if (deuxPlusGrand == true) {
             unPlusGrand = true;
             deuxPlusGrand = false;
