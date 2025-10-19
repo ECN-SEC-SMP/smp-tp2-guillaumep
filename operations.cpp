@@ -116,6 +116,7 @@ t_EntierLong additionQuelconque(t_EntierLong entierLongUn, t_EntierLong entierLo
         resultat.negatif = 1;
         return resultat;
     }
+    return resultat;
 }
 
 t_EntierLong soustractionQuelconque(t_EntierLong entierLongUn, t_EntierLong entierLongDeux){
@@ -129,7 +130,7 @@ t_EntierLong soustractionQuelconque(t_EntierLong entierLongUn, t_EntierLong enti
         }
         else if(testEgaliteAbsolue(entierLongUn, entierLongDeux) == 2){
             resultat = soustraction(entierLongDeux, entierLongUn);
-            resulat.negatif = 1;
+            resultat.negatif = 1;
             return resultat;
         }
        else{
@@ -145,7 +146,7 @@ t_EntierLong soustractionQuelconque(t_EntierLong entierLongUn, t_EntierLong enti
     // Si premier entier négatif et second positif
     if(entierLongUn.negatif == 1 && entierLongDeux.negatif == 0){
         resultat = addition(entierLongUn, entierLongDeux);
-        resulat.negatif = 1;
+        resultat.negatif = 1;
         return resultat;
     }
 
@@ -154,7 +155,7 @@ t_EntierLong soustractionQuelconque(t_EntierLong entierLongUn, t_EntierLong enti
         // Si entier un negatif plus grand que positif on soustrait l'entier un par l'entier deux
         if(testEgaliteAbsolue(entierLongUn, entierLongDeux) == 1){
             resultat = soustraction(entierLongUn, entierLongDeux);
-            resulat.negatif = 1;
+            resultat.negatif = 1;
             return resultat;
         }
         // Si entier deux positif plus grand que négatif on soustrait l'entier deux par l'entier un
@@ -166,5 +167,6 @@ t_EntierLong soustractionQuelconque(t_EntierLong entierLongUn, t_EntierLong enti
             return soustraction(entierLongUn, entierLongDeux);
         }
     }
+    return resultat;
 
 }
