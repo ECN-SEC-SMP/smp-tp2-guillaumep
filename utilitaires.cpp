@@ -11,7 +11,7 @@ t_EntierLong convertIntLong(string entierStandard){
     t_EntierLong entierLong;
     string stringEntier = entierStandard;
 
-    // Verifie si le nombre est negatif
+    // Vérifie si le nombre est negatif
     if (stringEntier[0] == '-') {
         entierLong.negatif = true;
         // Suppression du signe negatif pour traiter le nombre dans la boucle
@@ -19,6 +19,12 @@ t_EntierLong convertIntLong(string entierStandard){
     }
     else {
         entierLong.negatif = false;
+    }
+
+    // Vérifie si le nombre en entrée peut être convertie après avoir enlevé le signe négatif
+    if (stringEntier.length() > MAXCHIFFRES) {
+        cout << "Nombre trop grand !" << endl;
+        return entierLong;
     }
 
     // Boucle pour inverser les nombres de l'entier

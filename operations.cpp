@@ -1,9 +1,8 @@
 //
-// Created by xkami on 16/10/2025.
+// Created by pirau on 16/10/2025.
 //
 
 #include <iostream>
-#include <bits/stdc++.h>
 #include "entierlong.h"
 #include "utilitaires.h"
 using namespace std;
